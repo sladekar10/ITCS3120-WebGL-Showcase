@@ -1,6 +1,6 @@
 // HelloTriangle.js (c) 2012 matsuda
 // Vertex shader program
-var VSHADER_SOURCE =
+/*var VSHADER_SOURCE =
   'attribute vec4 a_Position;\n' +
   'void main() {\n' +
   '  gl_Position = a_Position;\n' +
@@ -11,7 +11,7 @@ var FSHADER_SOURCE =
   'void main() {\n' +
   '  gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);\n' +
   '}\n';
-
+*/
 function main() {
   // Retrieve <canvas> element
   var canvas = document.getElementById('webgl');
@@ -24,7 +24,7 @@ function main() {
   }
 
   // Initialize shaders
-  if (!initShaders(gl, VSHADER_SOURCE, FSHADER_SOURCE)) {
+  if (!initShaders(gl, document.getElementByID ("VertexShader1").innerText, document.getElementByID("FragmentShader1").innerText)) {
     console.log('Failed to intialize shaders.');
     return;
   }
