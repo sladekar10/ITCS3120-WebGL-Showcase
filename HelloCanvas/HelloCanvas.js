@@ -12,9 +12,12 @@ function main() {
 
   console.log("GLContext sucessfully created!");
 
-  // Set red color
-  gl.clearColor(1.0, 0.0, 0.0, 1.0);
+  var red = Math.random();
+  var green = Math.random();
+  var blue = Math.random();
+  var alpha = Math.random();
 
-  // Clear <canvas>
+  gl.clearColor(red, green, blue, alpha);
+
   gl.clear(gl.COLOR_BUFFER_BIT);
 }
